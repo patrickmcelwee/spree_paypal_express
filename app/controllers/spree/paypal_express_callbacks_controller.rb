@@ -18,7 +18,8 @@ module Spree
 
         case @notification.params["payment_status"]
           when "Denied"
-            @payment.fail!
+            #@payment.fail!
+            @payment.failure!
 
           when "Completed"
             @payment.complete!

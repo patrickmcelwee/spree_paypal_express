@@ -158,7 +158,8 @@ module Spree
         redirect_to completion_route
 
       else
-        payment.fail!
+        #payment.fail!
+        payment.failure!
         order_params = {}
         gateway_error(ppx_auth_response)
 
