@@ -10,8 +10,9 @@ Gem::Specification.new do |s|
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.require_paths = ["lib"]  
+  s.require_paths = ["lib"]
   s.has_rdoc      = false
 
-  s.add_dependency('spree_core', '>=0.40.3')
+  s.add_dependency('spree_core', '>=0.70.1')
+  s.add_development_dependency('rspec-rails')
 end
