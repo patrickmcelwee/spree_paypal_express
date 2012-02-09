@@ -35,7 +35,7 @@ module Spree
         @order = Spree::Order.find_by_number(params["invoice"])
 
         if @order
-          @payment = @order.payments.where(:state => "pending", :source_type => "PaypalAccount").try(:first)
+          @payment = @order.payments.where(:state => "pending", :source_type => "Spree::PaypalAccount").try(:first)
 
           @payment.try(:payment_method).try(:provider) #configures ActiveMerchant
         end
