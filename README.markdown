@@ -1,4 +1,4 @@
-Temporary patches for 0.70 and 0.1 waiting for an official update:
+# Temporary patches for 0.70 and 0.1 waiting for an official update:
 
 Using :branch => "fix-process_coupon_code-#16" for 0.70 (should be updated for 0.70.3 maybe)
 
