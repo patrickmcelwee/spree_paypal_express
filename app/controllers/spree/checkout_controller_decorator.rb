@@ -94,7 +94,7 @@ module Spree
         @order.save
 
         if payment_method.preferred_review
-          render 'shared/paypal_express_confirm'
+          render 'spree/shared/paypal_express_confirm'
         else
           paypal_finish
         end
@@ -268,8 +268,8 @@ module Spree
                :custom            => order.number,
                :items             => items,
                :subtotal          => ((order.item_total * 100) + credits_total).to_i,
-               :tax               => ((order.adjustments.map { |a| a.amount if ( a.source_type == 'Order' && a.label == 'Tax') }.compact.sum) * 100 ).to_i,
-               :shipping          => ((order.adjustments.map { |a| a.amount if a.source_type == 'Shipment' }.compact.sum) * 100 ).to_i,
+               :tax               => ((order.adjustments.map { |a| a.amount if ( a.source_type == 'Spree::Order' && a.label == 'Tax') }.compact.sum) * 100 ).to_i,
+               :shipping          => ((order.adjustments.map { |a| a.amount if a.source_type == 'Spree::Shipment' }.compact.sum) * 100 ).to_i,
                :money             => (order.total * 100 ).to_i }
 
         # add correct tax amount by subtracting subtotal and shipping otherwise tax = 0 -> need to check adjustments.map
