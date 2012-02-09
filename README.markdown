@@ -1,3 +1,9 @@
+Temporary patches for 0.70 and 0.1 waiting for an official update:
+
+Using :branch => "fix-process_coupon_code-#16" for 0.70 (should be updated for 0.70.3 maybe)
+
+Using :branch => "patch_for_1.0" for 1.0 (I tested with 1.0.0.rc3)
+
 # Official PayPal Express for Spree
 
 This is the official PayPal Express extension for Spree, based on the extension by PaulCC it has been extended to support Spree's
