@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.has_rdoc      = false
 
-  s.add_dependency('spree_core', '>=1.0.0')
+  s.add_dependency('spree_core', '>0.9')
   s.add_development_dependency('rspec-rails')
 end
